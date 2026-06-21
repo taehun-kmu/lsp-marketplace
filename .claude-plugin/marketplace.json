@@ -1,0 +1,40 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "latex-lsp",
+  "description": "LaTeX/BibTeX language server (texlab) for code intelligence",
+  "owner": {
+    "name": "Taehun Jung",
+    "email": "taehun@kookmin.ac.kr"
+  },
+  "plugins": [
+    {
+      "name": "latex-lsp",
+      "description": "LaTeX/BibTeX language server (texlab) for code intelligence",
+      "version": "1.0.0",
+      "author": {
+        "name": "Taehun Jung",
+        "email": "taehun@kookmin.ac.kr"
+      },
+      "source": "./plugins/latex-lsp",
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "texlab": {
+          "command": "texlab",
+          "args": [],
+          "extensionToLanguage": {
+            ".tex": "latex",
+            ".sty": "latex",
+            ".cls": "latex",
+            ".clo": "latex",
+            ".def": "latex",
+            ".lco": "latex",
+            ".rnw": "latex",
+            ".bib": "bibtex",
+            ".bibtex": "bibtex"
+          }
+        }
+      }
+    }
+  ]
+}
