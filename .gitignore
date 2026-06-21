@@ -1,0 +1,22 @@
+# macOS
+.AppleDouble
+.DS_Store
+.LSOverride
+
+# Windows
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# Linux
+*~
+.directory
+
+# Editors and IDEs
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.swo
+*.swp
+.idea/
+.vscode/
