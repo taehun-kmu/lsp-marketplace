@@ -12,8 +12,10 @@ lsp-marketplace provides language-server plugins for Claude Code. It packages te
 
 ## Plugins
 
-- **latex-lsp** — texlab language server for LaTeX/BibTeX: completion, navigation, diagnostics, symbols, and `latexmk`/`pdflatex` build integration
-- **json-lsp** — vscode-json-languageserver for JSON/JSONC: completion, hover, diagnostics, and schema validation
+- **latex-lsp** ([taehun-kmu/latex-lsp](https://github.com/taehun-kmu/latex-lsp)) — texlab language server for LaTeX/BibTeX: completion, navigation, diagnostics, symbols, and `latexmk`/`pdflatex` build integration
+- **json-lsp** ([taehun-kmu/json-lsp](https://github.com/taehun-kmu/json-lsp)) — vscode-json-languageserver for JSON/JSONC: completion, hover, diagnostics, and schema validation
+
+Each plugin lives in its own repository; this marketplace catalogs them by pinned commit.
 
 ### Supported Extensions
 
@@ -25,10 +27,7 @@ lsp-marketplace provides language-server plugins for Claude Code. It packages te
 ```text
 lsp-marketplace/
 ├── .claude-plugin/
-│   └── marketplace.json     # Marketplace manifest + lspServers for both plugins
-├── plugins/
-│   ├── latex-lsp/           # texlab plugin (README + LICENSE)
-│   └── json-lsp/            # vscode-json-languageserver plugin (README + LICENSE)
+│   └── marketplace.json     # Catalog referencing the latex-lsp and json-lsp repos (pinned commits)
 ├── LICENSE
 └── README.md
 ```

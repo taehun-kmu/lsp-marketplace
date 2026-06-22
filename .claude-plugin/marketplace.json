@@ -10,52 +10,19 @@
     {
       "name": "latex-lsp",
       "description": "LaTeX/BibTeX language server (texlab) for code intelligence",
-      "version": "1.0.0",
-      "author": {
-        "name": "Taehun Jung",
-        "email": "taehun@kookmin.ac.kr"
-      },
-      "source": "./plugins/latex-lsp",
-      "category": "development",
-      "strict": false,
-      "lspServers": {
-        "texlab": {
-          "command": "texlab",
-          "args": [],
-          "extensionToLanguage": {
-            ".tex": "latex",
-            ".sty": "latex",
-            ".cls": "latex",
-            ".clo": "latex",
-            ".def": "latex",
-            ".lco": "latex",
-            ".rnw": "latex",
-            ".bib": "bibtex",
-            ".bibtex": "bibtex"
-          }
-        }
+      "source": {
+        "source": "github",
+        "repo": "taehun-kmu/latex-lsp",
+        "commit": "22a315ff16241fecfd4c10ee03a17e5784201de9"
       }
     },
     {
       "name": "json-lsp",
       "description": "JSON/JSONC language server (vscode-json-languageserver) for code intelligence",
-      "version": "1.0.0",
-      "author": {
-        "name": "Taehun Jung",
-        "email": "taehun@kookmin.ac.kr"
-      },
-      "source": "./plugins/json-lsp",
-      "category": "development",
-      "strict": false,
-      "lspServers": {
-        "json": {
-          "command": "vscode-json-languageserver",
-          "args": ["--stdio"],
-          "extensionToLanguage": {
-            ".json": "json",
-            ".jsonc": "jsonc"
-          }
-        }
+      "source": {
+        "source": "github",
+        "repo": "taehun-kmu/json-lsp",
+        "commit": "e3df8a52b7ee4fa53916fa6ea8ba8b5b53cb1be6"
       }
     }
   ]
