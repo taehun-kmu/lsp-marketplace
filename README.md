@@ -1,6 +1,6 @@
-# latex-lsp
+# lsp-marketplace
 
-LaTeX and BibTeX code intelligence for Claude Code, powered by the texlab language server.
+Language-server plugins for Claude Code, powered by texlab (LaTeX/BibTeX) and vscode-json-languageserver (JSON/JSONC).
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-D97757?logo=claude&logoColor=white)](https://docs.claude.com/en/docs/claude-code)
@@ -8,41 +8,27 @@ LaTeX and BibTeX code intelligence for Claude Code, powered by the texlab langua
 
 ## Overview
 
-latex-lsp provides LaTeX and BibTeX language support for Claude Code. It integrates the texlab language server as a Claude Code plugin, enabling code intelligence, diagnostics, and completion directly on LaTeX and BibTeX files.
+lsp-marketplace provides language-server plugins for Claude Code. It packages texlab and vscode-json-languageserver as Claude Code plugins, enabling code intelligence, diagnostics, and completion directly on LaTeX/BibTeX and JSON/JSONC files.
 
-## Features
+## Plugins
 
-### Language Intelligence
-
-- **Completion**: commands, citations, labels, and cross-references
-- **Navigation**: go-to-definition, find references, and hover documentation
-- **Symbols**: document outline and workspace-wide symbol search
-
-### Diagnostics
-
-- **Real-time checks**: undefined references, unused BibTeX entries, and syntax errors
-
-### Build Integration
-
-- **Compile support**: texlab coordinates with `latexmk` / `pdflatex` for building and error reporting
+- **latex-lsp** — texlab language server for LaTeX/BibTeX: completion, navigation, diagnostics, symbols, and `latexmk`/`pdflatex` build integration
+- **json-lsp** — vscode-json-languageserver for JSON/JSONC: completion, hover, diagnostics, and schema validation
 
 ### Supported Extensions
 
-| Group  | Extensions                                       | Language ID |
-|--------|--------------------------------------------------|-------------|
-| LaTeX  | `.tex` `.sty` `.cls` `.clo` `.def` `.lco` `.rnw` | `latex`     |
-| BibTeX | `.bib` `.bibtex`                                 | `bibtex`    |
+- **latex-lsp** — `.tex` `.sty` `.cls` `.clo` `.def` `.lco` `.rnw` (`latex`); `.bib` `.bibtex` (`bibtex`)
+- **json-lsp** — `.json` (`json`); `.jsonc` (`jsonc`)
 
 ## Project Structure
 
 ```text
-latex-lsp/
+lsp-marketplace/
 ├── .claude-plugin/
-│   └── marketplace.json     # Marketplace manifest + latex-lsp lspServers definition
+│   └── marketplace.json     # Marketplace manifest + lspServers for both plugins
 ├── plugins/
-│   └── latex-lsp/
-│       ├── README.md        # Plugin readme (texlab install methods)
-│       └── LICENSE
+│   ├── latex-lsp/           # texlab plugin (README + LICENSE)
+│   └── json-lsp/            # vscode-json-languageserver plugin (README + LICENSE)
 ├── LICENSE
 └── README.md
 ```
@@ -52,27 +38,29 @@ latex-lsp/
 ### Prerequisites
 
 - Claude Code
-- texlab language server (must be on your `PATH`)
-- latexmk or pdflatex (optional, for build features)
+- texlab on your `PATH` (for latex-lsp)
+- vscode-json-languageserver on your `PATH` (for json-lsp)
+- latexmk or pdflatex (optional, for latex-lsp build features)
 
 ### Installation
 
-Add this marketplace, then install the plugin.
+Add the marketplace, then install the plugins you want.
 
 ```bash
-claude plugin marketplace add taehun-kmu/latex-lsp
-claude plugin install latex-lsp@latex-lsp
+claude plugin marketplace add taehun-kmu/lsp-marketplace
+claude plugin install latex-lsp@lsp-marketplace
+claude plugin install json-lsp@lsp-marketplace
 ```
 
 ### Usage
 
-Reload plugins to load it in the current session:
+Reload plugins to load them in the current session:
 
 ```text
 /reload-plugins
 ```
 
-Open a `.tex` or `.bib` file and `texlab` activates automatically.
+Open a supported file (`.tex`, `.bib`, `.json`, `.jsonc`) and the matching language server activates automatically.
 
 ## License
 

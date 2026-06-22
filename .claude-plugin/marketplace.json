@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "latex-lsp",
-  "description": "LaTeX/BibTeX language server (texlab) for code intelligence",
+  "name": "lsp-marketplace",
+  "description": "Claude Code marketplace providing language-server plugins (latex-lsp, json-lsp)",
   "owner": {
     "name": "Taehun Jung",
     "email": "taehun@kookmin.ac.kr"
@@ -32,6 +32,28 @@
             ".rnw": "latex",
             ".bib": "bibtex",
             ".bibtex": "bibtex"
+          }
+        }
+      }
+    },
+    {
+      "name": "json-lsp",
+      "description": "JSON/JSONC language server (vscode-json-languageserver) for code intelligence",
+      "version": "1.0.0",
+      "author": {
+        "name": "Taehun Jung",
+        "email": "taehun@kookmin.ac.kr"
+      },
+      "source": "./plugins/json-lsp",
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "json": {
+          "command": "vscode-json-languageserver",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".json": "json",
+            ".jsonc": "jsonc"
           }
         }
       }
