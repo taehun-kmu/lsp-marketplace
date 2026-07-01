@@ -9,11 +9,11 @@
   "plugins": [
     {
       "name": "latex-lsp",
-      "description": "LaTeX/BibTeX language server (texlab) for code intelligence",
+      "description": "LaTeX/BibTeX language server for code intelligence",
       "source": {
         "source": "github",
         "repo": "taehun-kmu/latex-lsp",
-        "commit": "978dc4b1b802d58d127eab392ffc725496a5b0fe"
+        "commit": "f25ca00936d18827df3cc51cffad5cf4022b03c0"
       }
     },
     {
