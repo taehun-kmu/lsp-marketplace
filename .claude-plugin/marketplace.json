@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "lsp-marketplace",
-  "description": "Claude Code marketplace providing language-server plugins (latex-lsp, json-lsp)",
+  "description": "Claude Code marketplace providing language-server plugins",
   "owner": {
     "name": "Taehun Jung",
     "email": "taehun@kookmin.ac.kr"
